@@ -1,0 +1,145 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --DarkCyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --VeryDarkBlue: hsl(212, 21%, 14%);
+    --DarkGrayishBlue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    font-family: "Montserrat", sans-serif;
+    /* font-family: "Fraunces", serif; */
+
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin-block-end: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-wrap: balance;
+}
+
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    background-color: var(--Cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.card {
+    display: flex;
+    
+    max-width: 40rem;
+    border-radius: 10px;
+    background-color: var(--White);
+}
+.img-product {
+    width: 50%;
+    border-radius: 10px  0 0 10px;
+}
+.card-detail {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+.topic {
+    color: var(--DarkGrayishBlue);
+}
+.header {
+    font-family: "Fraunces", serif;
+    color: var(--VeryDarkBlue);
+}
+.detail {
+    color: var(--DarkGrayishBlue);
+}
+.price {
+    display: flex;
+    align-items: center;
+
+    gap: 1.5em;
+}
+.second-price {
+    font-family: "Fraunces", serif;
+    color: var(--DarkCyan);
+}
+.first-price {
+    text-decoration: line-through;
+    color: var(--DarkGrayishBlue);
+}
+.add-cart {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    background-color: var(--DarkCyan);
+    color: var(--White);
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+    padding-block: 1em;
+    cursor: pointer;
+}
+footer {
+    margin-top: 2.5rem;
+    font-size: .5em;
+}
+
+@media (max-width: 375px) {
+    .card {
+        flex-direction: column;
+        
+    }
+
+    .img-product {
+        width: 100%;
+        height: 16rem;
+        border-radius: 10px 10px 0 0;
+        object-fit: cover;
+        object-position: 0 50%;
+    }
+
+}
